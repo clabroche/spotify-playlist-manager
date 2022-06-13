@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .root {
+      width: 400px;
+      height: 400px;
+      overflow: hidden;
+      background-image: url({{background}});
+      background-size: cover;
+      background-position: center;
+      font-family: MuseoModerno;
+      line-height: 1;
+    }
+
+    .text {
+      text-align: center;
+      font-size: 50px;
+      color: white;
+    }
+
+    .text.inverse {
+      transform: rotateX(180deg) rotateY(180deg);
+      transform: rotateX(180deg);
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke-width: 1px;
+    }
+
+    .text.text1 {}
+
+    .text.text2 {
+      opacity: 0.5;
+    }
+
+    .text.text3 {
+      opacity: 0.3;
+    }
+
+    .text.text4 {
+      opacity: 0.1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="root indie">
+    <div class="filter">
+      <div class="text text4" sp-text></div>
+      <div class="text text3" sp-text></div>
+      <div class="text text2" sp-text></div>
+      <div class="text text1" sp-text></div>
+      <div class="text text1 inverse" sp-text></div>
+      <div class="text text2 inverse" sp-text></div>
+      <div class="text text3 inverse" sp-text></div>
+      <div class="text text4 inverse" sp-text></div>
+    </div>
+  </div>
+</body>
+
+</html>

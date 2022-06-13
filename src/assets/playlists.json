@@ -1,0 +1,131 @@
+{
+  "backgroundImage": "stars.jpg",
+  "versions": [
+    {
+      "id": "slowdown",
+      "style": {
+        ".filter": {
+          "backdropFilter": "blur(0px) brightness(0.6) contrast(1.3) hue-rotate(277.9deg) invert(0) saturate(1.4)"
+        }
+      },
+      "text": "SLOW DOWN",
+      "playlistId": "5fjaR6Oc9mlTdNtNAvC1eX",
+      "playlistTitle": "Slow down",
+      "prefix": "{{order}} ~ ",
+      "public": true,
+      "description": ""
+    },
+    {
+      "id": "acoustic",
+      "style": {
+        ".filter": {
+          "backdropFilter": "blur(0px) brightness(1) contrast(0.5) hue-rotate(87.9deg) invert(0) saturate(3.5)"
+        }
+      },
+      "text": "ACOUSTIC",
+      "playlistId": "4JNUgQe697uwDjQsGdG2AQ",
+      "playlistTitle": "Acoustic",
+      "prefix": "{{order}} ~ ",
+      "public": true,
+      "description": ""
+    },
+    {
+      "id": "indie",
+      "style": {
+        ".filter": {
+          "backdropFilter": "blur(0px) brightness(1) contrast(1) hue-rotate(7.9deg) invert(0)"
+        }
+      },
+      "text": "INDIE",
+      "playlistId": "1przYU4O5eQqlcm4f1oRRs",
+      "playlistTitle": "Indie",
+      "prefix": "{{order}} ~ ",
+      "public": true,
+      "description": ""
+    },
+    {
+      "id": "classicRock",
+      "style": {
+        ".filter": {
+          "backdropFilter": "blur(0px) brightness(0.9) contrast(2.3) hue-rotate(246deg) invert(1)"
+        }
+      },
+      "text": "SOFT ROCK",
+      "playlistId": "7HQKsSl6hzh96z9OasQBzg",
+      "playlistTitle": "Soft rock",
+      "prefix": "{{order}} ~ ",
+      "public": true,
+      "description": ""
+    },
+    {
+      "id": "Rock",
+      "style": {
+        ".filter": {
+          "backdropFilter": "blur(0px) brightness(1.4) contrast(2.3) hue-rotate(-111.6deg) invert(1)"
+        }
+      },
+      "text": "ROCK",
+      "playlistId": "3b5sioM7wYlFIKAvTawVME",
+      "playlistTitle": "Rock",
+      "prefix": "{{order}} ~ ",
+      "public": true,
+      "description": ""
+    },
+    {
+      "id": "metal",
+      "style": {
+        ".filter": {
+          "backdropFilter": "blur(0px) brightness(1.6) contrast(1.1) hue-rotate(234.5deg) invert(1) saturate(2.2)"
+        }
+      },
+      "text": "METAL",
+      "playlistId": "0cQp5wVJRjkM4Ok5bqOx9m",
+      "playlistTitle": "Metal",
+      "prefix": "{{order}} ~ ",
+      "public": true,
+      "description": ""
+    },
+    {
+      "id": "Post Metal",
+      "style": {
+        ".filter": {
+          "backdropFilter": "blur(0px) brightness(1.6) contrast(1.1) hue-rotate(127.7deg) invert(1) saturate(2.2)"
+        }
+      },
+      "text": "POST METAL",
+      "playlistId": "30OUIcGDOgn59xnolM8xmU",
+      "playlistTitle": "Post Metal",
+      "prefix": "{{order}} ~ ",
+      "public": true,
+      "description": ""
+    },
+    {
+      "id": "electronic",
+      "style": {
+        ".filter": {
+          "backdropFilter": "blur(0px) brightness(0.6) contrast(2.8) hue-rotate(314deg) invert(0) saturate(1.8)"
+        }
+      },
+      "text": "ELECTRONIC",
+      "playlistId": "33muetUQ8kZWvWgQuflnNH",
+      "playlistTitle": "Electronic",
+      "prefix": "{{order}} ~ ",
+      "public": true,
+      "description": ""
+    },
+    {
+      "id": "Rap",
+      "style": {
+        ".filter": {
+          "backdropFilter": "blur(0px) brightness(0.6) contrast(2.8) hue-rotate(518deg) invert(0) saturate(0.5)"
+        }
+      },
+      "text": "RAP",
+      "playlistId": "3CRIBpiwga8W80hC93AjXB",
+      "playlistTitle": "Rap",
+      "prefix": "{{order}} ~ ",
+      "public": true,
+      "description": ""
+    }
+  ]
+}
