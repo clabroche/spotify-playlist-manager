@@ -3,9 +3,10 @@ const path = require('path')
 const chokidar = require('chokidar')
 const PromiseB = require('bluebird')
 require('dotenv').config()
-const login = require('./login')
 const { getPage, screen, close: browserClose } = require('./browser')
-const { updateCover, updateInfos } = require('./spotify')
+// Dos Deezer : Spotify n'est plus la cible (cf. src/deezer.js). L'ancien
+// src/spotify.js reste en place pour mémoire.
+const { updateCover, updateInfos, playlists: remotePlaylists } = require('./deezer')
 const { isPreviewMode, isEditable } = require('./cli')
 const coverDir = path.resolve(__dirname, '..', 'output')
 
@@ -14,13 +15,13 @@ let playlists = getConf()
 if (!fs.existsSync(coverDir)) fs.mkdirSync(coverDir)
 
   ; (async _ => {
-    const isLogged = await login.oauth()
+    const isLogged = await checkAuth()
     console.log('Image generation...')
 
     if (isPreviewMode) await showPreviews()
     else await generateCovers()
 
-    if (isLogged && !isPreviewMode) await updateSpotify()
+    if (isLogged && !isPreviewMode) await updateDeezer()
   })().catch(async err => {
     console.error(err?.response?.data || err?.response?.status || err)
     await browserClose()
@@ -71,7 +72,10 @@ function getPrefix(version, index) {
 async function generateCovers(playlistToGenerate) {
   if (!playlistToGenerate?.length) playlistToGenerate = playlists.versions.map(v => v.id)
   const page = await getPage('about:blank', { headless: !isEditable })
-  await page.setContent(loadHtml());
+  await page.setContent(loadHtml(), { waitUntil: 'networkidle0' });
+  // La capture doit attendre la police, sinon la première pochette sort avec
+  // le repli et la mise en page saute.
+  await page.evaluate(() => document.fonts.ready);
   const res = await PromiseB
     .filter(playlists.versions, v => playlistToGenerate.includes(v.id))
     .mapSeries(async (version, index) => {
@@ -90,10 +94,33 @@ async function generateCovers(playlistToGenerate) {
   return res
 }
 
-async function updateSpotify() {
+/** L'ARL est-il exploitable ? En prévisualisation, on ne demande rien. */
+async function checkAuth() {
+  if (isPreviewMode) {
+    console.log('=> Mode prévisualisation : aucune écriture sur Deezer.')
+    return false
+  }
+  try {
+    await remotePlaylists()
+    console.log('=> ARL accepté par Deezer.')
+    return true
+  } catch (err) {
+    console.log('=> ' + err.message + ' — génération des images seulement.')
+    return false
+  }
+}
+
+async function updateDeezer() {
   return PromiseB.mapSeries(playlists.versions, async (version, index) => {
     console.log(`[${index + 1}/${playlists.versions.length}]: Upload infos... :${version.text}`)
-    if (version.playlistId) await updateCover(version.playlistId, version.coverB64)
+    if (!version.playlistId) {
+      console.log('   (pas d\'identifiant Deezer, ignorée)')
+      return
+    }
+    await updateCover(version.playlistId, version.coverB64)
+    // `updateInfos: false` : pochette seule, le titre et la description de la
+    // playlist restent tels quels (hors de la série numérotée, ils sont à toi).
+    if (version.updateInfos === false) return
     if (version.playlistTitle) await updateInfos(version.playlistId, version, getPrefix(version, index))
   })
 }

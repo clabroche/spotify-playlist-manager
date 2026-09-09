@@ -10,7 +10,7 @@
         }
       },
       "text": "SLOW DOWN",
-      "playlistId": "5fjaR6Oc9mlTdNtNAvC1eX",
+      "playlistId": "13979554101",
       "playlistTitle": "Slow down",
       "prefix": "{{order}} ~ ",
       "public": true,
@@ -25,7 +25,7 @@
         }
       },
       "text": "ACOUSTIC",
-      "playlistId": "4JNUgQe697uwDjQsGdG2AQ",
+      "playlistId": "13979554201",
       "playlistTitle": "Acoustic",
       "prefix": "{{order}} ~ ",
       "public": true,
@@ -39,7 +39,7 @@
         }
       },
       "text": "INDIE",
-      "playlistId": "1przYU4O5eQqlcm4f1oRRs",
+      "playlistId": "13979554221",
       "playlistTitle": "Indie",
       "prefix": "{{order}} ~ ",
       "public": true,
@@ -53,7 +53,7 @@
         }
       },
       "text": "SOFT ROCK",
-      "playlistId": "7HQKsSl6hzh96z9OasQBzg",
+      "playlistId": "13979554301",
       "playlistTitle": "Soft rock",
       "prefix": "{{order}} ~ ",
       "public": true,
@@ -67,7 +67,7 @@
         }
       },
       "text": "ROCK",
-      "playlistId": "3b5sioM7wYlFIKAvTawVME",
+      "playlistId": "13979554361",
       "playlistTitle": "Rock",
       "prefix": "{{order}} ~ ",
       "public": true,
@@ -81,7 +81,7 @@
         }
       },
       "text": "METAL",
-      "playlistId": "0cQp5wVJRjkM4Ok5bqOx9m",
+      "playlistId": "13979554401",
       "playlistTitle": "Metal",
       "prefix": "{{order}} ~ ",
       "public": true,
@@ -95,7 +95,7 @@
         }
       },
       "text": "POST METAL",
-      "playlistId": "30OUIcGDOgn59xnolM8xmU",
+      "playlistId": "13979554441",
       "playlistTitle": "Post Metal",
       "prefix": "{{order}} ~ ",
       "public": true,
@@ -109,7 +109,7 @@
         }
       },
       "text": "ELECTRONIC",
-      "playlistId": "33muetUQ8kZWvWgQuflnNH",
+      "playlistId": "13979554501",
       "playlistTitle": "Electronic",
       "prefix": "{{order}} ~ ",
       "public": true,
@@ -123,7 +123,7 @@
         }
       },
       "text": "ELECTRO DARK",
-      "playlistId": "30hTmNUMpDnpsk0K7fzlTI",
+      "playlistId": "13979554521",
       "playlistTitle": "Electro Dark",
       "prefix": "{{order}} ~ ",
       "public": true,
@@ -137,11 +137,76 @@
         }
       },
       "text": "RAP",
-      "playlistId": "3CRIBpiwga8W80hC93AjXB",
+      "playlistId": "13979554541",
       "playlistTitle": "Rap",
       "prefix": "{{order}} ~ ",
       "public": true,
       "description": ""
+    },
+    {
+      "id": "annee2023",
+      "backgroundImage": "stars2.jpg",
+      "style": {
+        ".filter": {
+          "backdropFilter": "grayscale(1) sepia(1) saturate(3) hue-rotate(10deg) brightness(0.8) contrast(1.25)"
+        }
+      },
+      "text": "2023",
+      "playlistId": "13979554061",
+      "playlistTitle": "2023",
+      "updateInfos": false
+    },
+    {
+      "id": "atrier",
+      "backgroundImage": "wave.jpg",
+      "style": {
+        ".filter": {
+          "backdropFilter": "grayscale(1) sepia(1) saturate(2.5) hue-rotate(150deg) brightness(0.9) contrast(1.2)"
+        }
+      },
+      "text": "À TRIER",
+      "playlistId": "13979554561",
+      "playlistTitle": "A trier",
+      "updateInfos": false
+    },
+    {
+      "id": "belgique",
+      "backgroundImage": "explode.jpg",
+      "style": {
+        ".filter": {
+          "backdropFilter": "grayscale(1) sepia(1) saturate(5) hue-rotate(345deg) brightness(0.7) contrast(1.4)"
+        }
+      },
+      "text": "BELGIQUE",
+      "playlistId": "13979554581",
+      "playlistTitle": "Belgique",
+      "updateInfos": false
+    },
+    {
+      "id": "plustard",
+      "backgroundImage": "fractal.jpg",
+      "style": {
+        ".filter": {
+          "backdropFilter": "grayscale(1) sepia(1) saturate(3) hue-rotate(235deg) brightness(0.85) contrast(1.25)"
+        }
+      },
+      "text": "PLUS TARD",
+      "playlistId": "13979553901",
+      "playlistTitle": "Ma Playlist pour plus tard 2024",
+      "updateInfos": false
+    },
+    {
+      "id": "road30",
+      "backgroundImage": "crystals.jpg",
+      "style": {
+        ".filter": {
+          "backdropFilter": "grayscale(1) sepia(1) saturate(3) hue-rotate(285deg) brightness(0.55) contrast(1.35)"
+        }
+      },
+      "text": "30 ANS",
+      "playlistId": "13979553921",
+      "playlistTitle": "Road to 30ans",
+      "updateInfos": false
     }
   ]
 }
